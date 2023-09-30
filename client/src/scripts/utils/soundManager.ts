@@ -139,9 +139,9 @@ export function loadSounds(soundManager: SoundManager): void {
     }
 
     for (const gun of Guns) {
-        soundsToLoad.push([`${gun.idString}_fire`, `audio/sfx/weapons/${gun.idString}_fire`]);
-        soundsToLoad.push([`${gun.idString}_switch`, `audio/sfx/weapons/${gun.idString}_switch`]);
-        soundsToLoad.push([`${gun.idString}_reload`, `audio/sfx/weapons/${gun.idString}_reload`]);
+        soundsToLoad.push([`${gun.name}_fire`, `audio/sfx/weapons/${gun.name}_fire`]);
+        soundsToLoad.push([`${gun.name}_switch`, `audio/sfx/weapons/${gun.name}_switch`]);
+        soundsToLoad.push([`${gun.name}_reload`, `audio/sfx/weapons/${gun.name}_reload`]);
     }
 
     for (const healingItem of HealingItems) {

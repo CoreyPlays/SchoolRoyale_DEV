@@ -15,5 +15,5 @@ export const Config = {
         sa: { name: "South America", address: "sa.suroi.io", https: true },
         as: { name: "Asia", address: "as.suroi.io", https: true }
     },
-    defaultRegion: "na"
+    defaultRegion: "dev"
 } satisfies ConfigType as ConfigType;

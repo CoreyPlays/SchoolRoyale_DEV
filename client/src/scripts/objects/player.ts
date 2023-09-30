@@ -287,7 +287,7 @@ export class Player extends GameObject {
                         const weaponDef = (this.activeItem.definition as GunDefinition);
                         actionName = "Reloading...";
                         if (weaponDef.casingParticles?.spawnOnReload) this.spawnCasingParticles();
-                        actionSoundName = `${this.activeItem.idString}_reload`;
+                        actionSoundName = `${weaponDef.name}_reload`;
                         actionTime = (this.activeItem.definition as GunDefinition).reloadTime;
                         break;
                     }
@@ -392,7 +392,7 @@ export class Player extends GameObject {
             if (weaponDef.itemType === ItemType.Melee) {
                 this.images.weapon.setFrame(`${weaponDef.idString}`);
             } else if (weaponDef.itemType === ItemType.Gun) {
-                this.images.weapon.setFrame(`${weaponDef.idString}_world`);
+                this.images.weapon.setFrame(`${weaponDef.name}_world`);
             }
             this.images.weapon.setPos(weaponDef.image.position.x, weaponDef.image.position.y);
             this.images.weapon.setAngle(weaponDef.image.angle);
@@ -401,7 +401,7 @@ export class Player extends GameObject {
                 this.muzzleFlashFadeAnim?.kill();
                 this.muzzleFlashRecoilAnim?.kill();
                 this.images.muzzleFlash.alpha = 0;
-                if (this.isActivePlayer) this.playSound(`${this.activeItem.idString}_switch`, 0);
+                if (this.isActivePlayer) this.playSound(`${weaponDef.name}_switch`, 0);
             }
         }
 
@@ -579,7 +579,7 @@ export class Player extends GameObject {
             }
             case AnimationType.Gun: {
                 const weaponDef = this.activeItem.definition as GunDefinition;
-                this.playSound(`${weaponDef.idString}_fire`, 0.5);
+                this.playSound(`${weaponDef.name}_fire`, 0.5);
 
                 if (weaponDef.itemType === ItemType.Gun) {
                     this.updateFistsPosition(false);

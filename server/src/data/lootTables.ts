@@ -20,10 +20,10 @@ export const LootTables: Record<string, LootTable> = {
         max: 1,
         loot: [
             { tier: "guns", weight: 1.25 },
-            { tier: "equipment", weight: 1 },
+            { tier: "equipment", weight: 0.3 },
             { tier: "scopes", weight: 0.3 },
             { tier: "healing_items", weight: 1 },
-            { tier: "ammo", weight: 0.5 },
+            { tier: "ammo", weight: 0.6 },
             { tier: "melee", weight: 0.04 }
         ]
     },
@@ -58,8 +58,7 @@ export const LootTables: Record<string, LootTable> = {
         min: 1,
         max: 1,
         loot: [
-            { item: "mosin", weight: 1 },
-            { item: "tango_51", weight: 0.1 }
+            { item: "har.epic", weight: 1 },
         ]
     },
     blueberry_bush: {
@@ -187,34 +186,36 @@ export const LootTables: Record<string, LootTable> = {
         min: 1,
         max: 1,
         loot: [
-            { item: "mcx_spear", weight: 1 }
+            { item: "har.epic", weight: 1 },
+            { item: "ar.epic", weight: 1 },
+            { item: "hs.epic", weight: 1 },
+            { item: "har.legendary", weight: 0.5 },
+            { item: "ar.legendary", weight: 0.5 },
+            { item: "hs.legendary", weight : 0.5 }
         ]
     }
 };
 
 export const LootTiers: Record<string, WeightedLoot[]> = {
     guns: [
-        { item: "g19", weight: 2 },
-        { item: "mp40", weight: 1.75 },
-        { item: "saf_200", weight: 1.5 },
-        { item: "cz75a", weight: 1.5 },
-        { item: "hp18", weight: 1.25 },
-        { item: "micro_uzi", weight: 1.25 },
-        { item: "aug", weight: 1 },
-        { item: "m37", weight: 1 },
-        { item: "ak47", weight: 0.8 },
-        { item: "m3k", weight: 0.5 },
-        { item: "m16a4", weight: 0.1 },
-        { item: "mcx_spear", weight: 0.1 },
-        { item: "arx160", weight: 0.1 },
-        { item: "flues", weight: 0.1 },
-        { item: "sr25", weight: 0.085 },
-        { item: "mini14", weight: 0.085 },
-        { item: "vss", weight: 0.075 },
-        { item: "lewis_gun", weight: 0.05 },
-        { item: "stoner_63", weight: 0.03 },
-        { item: "mosin", weight: 0.02 },
-        { item: "tango_51", weight: 0.002 }
+        { item: "har.uncommon", weight: 2 },
+        { item: "har.common", weight: 1.25 },
+        { item: "har.rare", weight: 1 },
+        { item: "har.epic", weight: 0.5 },
+        { item: "har.legendary", weight: 0.25 },
+        { item: "ar.uncommon", weight: 2 },
+        { item: "ar.common", weight: 1.25 },
+        { item: "ar.rare", weight: 1 },
+        { item: "ar.epic", weight: 0.5 },
+        { item: "ar.legendary", weight: 0.25 },
+        { item: "pistol.uncommon", weight: 2 },
+        { item: "pistol.common", weight: 1.25 },
+        { item: "pistol.rare", weight: 1 },
+        { item: "hs.epic", weight: 0.25 },
+        { item: "hs.epic", weight: 0.15 },
+        { item: "cs.uncommon", weight: 2 },
+        { item: "cs.common", weight: 1.25 },
+        { item: "cs.rare", weight: 1 },
     ],
     healing_items: [
         { item: "gauze", weight: 3, count: 5 },
@@ -248,27 +249,12 @@ export const LootTiers: Record<string, WeightedLoot[]> = {
         { item: "9mm", count: 60, weight: 1 }
     ],
     special_guns: [
-        { item: "micro_uzi", weight: 1.25 },
-        { item: "ak47", weight: 1.1 },
-        { item: "aug", weight: 1.05 },
-        { item: "hp18", weight: 1 },
-        { item: "mp40", weight: 1 },
-        { item: "m37", weight: 1 },
-        { item: "m3k", weight: 0.8 },
-        { item: "arx160", weight: 0.8 },
-        { item: "flues", weight: 0.8 },
-        { item: "saf_200", weight: 0.75 },
-        { item: "cz75a", weight: 0.75 },
-        { item: "vss", weight: 0.55 },
-        { item: "m16a4", weight: 0.5 },
-        { item: "g19", weight: 0.45 },
-        { item: "sr25", weight: 0.35 },
-        { item: "mini14", weight: 0.35 },
-        { item: "lewis_gun", weight: 0.35 },
-        { item: "mcx_spear", weight: 0.35 },
-        { item: "stoner_63", weight: 0.05 },
-        { item: "mosin", weight: 0.04 },
-        { item: "tango_51", weight: 0.004 }
+        { item: "har.epic", weight: 1 },
+        { item: "ar.epic", weight: 1 },
+        { item: "hs.epic", weight: 1 },
+        { item: "har.legendary", weight: 0.5 },
+        { item: "ar.legendary", weight: 0.5 },
+        { item: "hs.legendary", weight : 0.5 }
     ],
     special_healing_items: [
         { item: "cola", weight: 3 },

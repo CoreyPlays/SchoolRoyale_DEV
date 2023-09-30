@@ -232,10 +232,25 @@ export class PlayerManager {
                     container.addClass("has-item");
                     const item = stream.readObjectTypeNoCategory<ObjectCategory.Loot, LootDefinition>(ObjectCategory.Loot);
 
+                    const slotBackground: {[key: string]: string} = {
+                        "Uncommon": "rgba(32, 32, 32, 0.5)",
+                        "Common": "rgba(30, 141, 30, 0.5)",
+                        "Rare": "rgba(31, 85, 204, 0.5)",
+                        "Epic": "rgba(29, 0, 33, 0.5)",
+                        "Legendary": "rgba(226, 183, 9, 0.5)"
+                    };
+
+                    const selectedColor = item.definition.rarityType; // Replace with your logic to determine the color
+                    const backgroundColor = slotBackground[selectedColor];
+
                     this.weapons[i] = item;
                     container.children(".item-name").text(item.definition.name);
                     const itemDef = item.definition;
-                    container.children(".item-image").attr("src", `./img/game/weapons/${itemDef.idString}.svg`).show();
+                    if(item.definition.itemType === ItemType.Gun) {
+                        container.children(".item-image").attr("src", `./img/game/weapons/${item.definition.name}.svg`).css({"background-color": backgroundColor}).show();
+                    } else {
+                        container.children(".item-image").attr("src", `./img/game/weapons/${item.definition.name}.svg`).show();
+                    }
 
                     if (itemDef.itemType === ItemType.Gun) {
                         const ammo = stream.readUint8();

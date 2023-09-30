@@ -17,10 +17,10 @@ export const Backpacks: BackpackDefinition[] = [
             medikit: 1,
             cola: 2,
             tablets: 1,
-            "12g": 15,
-            "556mm": 90,
-            "762mm": 90,
-            "9mm": 120,
+            "12g": 500,
+            "556mm": 500,
+            "762mm": 500,
+            "9mm": 500,
             power_cell: Infinity
         },
         noDrop: true
@@ -35,10 +35,10 @@ export const Backpacks: BackpackDefinition[] = [
             medikit: 2,
             cola: 5,
             tablets: 2,
-            "12g": 30,
-            "556mm": 180,
-            "762mm": 180,
-            "9mm": 240,
+            "12g": 500,
+            "556mm": 500,
+            "762mm": 500,
+            "9mm": 500,
             power_cell: Infinity
         }
     },
@@ -52,10 +52,10 @@ export const Backpacks: BackpackDefinition[] = [
             medikit: 3,
             cola: 10,
             tablets: 3,
-            "12g": 60,
-            "556mm": 240,
-            "762mm": 240,
-            "9mm": 330,
+            "12g": 500,
+            "556mm": 500,
+            "762mm": 500,
+            "9mm": 500,
             power_cell: Infinity
         }
     },
@@ -69,10 +69,10 @@ export const Backpacks: BackpackDefinition[] = [
             medikit: 4,
             cola: 15,
             tablets: 4,
-            "12g": 90,
-            "556mm": 300,
-            "762mm": 300,
-            "9mm": 420,
+            "12g": 500,
+            "556mm": 500,
+            "762mm": 500,
+            "9mm": 500,
             power_cell: Infinity
         }
     }

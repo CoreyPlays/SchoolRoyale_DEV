@@ -36,10 +36,17 @@ export class Loot extends GameObject {
 
         const definition = this.type.definition;
 
-        this.images = {
-            background: new SuroiSprite(),
-            item: new SuroiSprite(`${this.type.idString}${definition.itemType === ItemType.Skin ? "_base" : ""}`)
-        };
+        if(definition.itemType === ItemType.Gun) {
+            this.images = {
+                background: new SuroiSprite(),
+                item: new SuroiSprite(`${definition.name}${definition.itemType === ItemType.Skin ? "_base" : ""}`)
+            };
+        } else {
+            this.images = {
+                background: new SuroiSprite(),
+                item: new SuroiSprite(`${this.type.idString}${definition.itemType === ItemType.Skin ? "_base" : ""}`)
+            };
+        }
 
         if (definition.itemType === ItemType.Skin) this.images.item.setAngle(90).scale.set(0.75);
 
@@ -51,7 +58,7 @@ export class Loot extends GameObject {
         let backgroundTexture: string | undefined;
         switch (definition.itemType) {
             case ItemType.Gun: {
-                backgroundTexture = `loot_background_gun_${definition.ammoType}`;
+                backgroundTexture = `loot_background_gun_${definition.rarityType}`;
                 this.images.item.scale.set(0.85);
                 break;
             }
